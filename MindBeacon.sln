@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindBeacon", "MindBeacon\MindBeacon.csproj", "{D86D6921-A9CB-4278-8F3C-17D1DAACB013}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindBeacon.Tests", "MindBeacon.Tests\MindBeacon.Tests.csproj", "{E14D7431-4E95-4957-998E-7BCD3EC0B7A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D86D6921-A9CB-4278-8F3C-17D1DAACB013}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D86D6921-A9CB-4278-8F3C-17D1DAACB013}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D86D6921-A9CB-4278-8F3C-17D1DAACB013}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E14D7431-4E95-4957-998E-7BCD3EC0B7A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E14D7431-4E95-4957-998E-7BCD3EC0B7A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E14D7431-4E95-4957-998E-7BCD3EC0B7A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E14D7431-4E95-4957-998E-7BCD3EC0B7A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
