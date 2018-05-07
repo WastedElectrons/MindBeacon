@@ -1,3 +1,7 @@
+BUILD INSTRUCTIONS
+
+The solution may be build with MSBUILD.
+
 DEPLOYMENT INSTRUCTIONS
 
 The MindBeacon app is a standalone web application with no external dependencies.
