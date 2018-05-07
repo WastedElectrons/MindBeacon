@@ -6,11 +6,13 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './components/app/app.component';
 import { HomeComponent } from './components/home/home.component';
+import { ImagesComponent } from './components/images/images.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        HomeComponent
+        HomeComponent,
+        ImagesComponent
     ],
     imports: [
         CommonModule,
@@ -19,6 +21,7 @@ import { HomeComponent } from './components/home/home.component';
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
+            { path: 'images', component: ImagesComponent },
             { path: '**', redirectTo: 'home' }
         ])
     ]

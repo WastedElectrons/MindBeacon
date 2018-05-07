@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MindBeacon.Models;
+using MindBeacon.Service;
 
 namespace MindBeacon.Controllers
 {
@@ -13,9 +17,9 @@ namespace MindBeacon.Controllers
     {
         // GET: api/Image
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<Image> Get()
         {
-            throw new NotImplementedException();
+            return Image.Repo.GetAll();
         }
     }
 }

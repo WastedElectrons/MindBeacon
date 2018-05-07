@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -42,6 +43,7 @@ namespace MindBeacon.Models
         /// <summary>
         /// The time the Image was uploaded.
         /// </summary>
+        [JsonConverter(typeof(Newtonsoft.Json.Converters.UnixDateTimeConverter))]
         public DateTime CreatedAt { get; set; }
 
         /// <summary>
@@ -53,16 +55,16 @@ namespace MindBeacon.Models
         /// The URL the image can be found at.
         /// </summary>
         public string ImageUrl { get; set; }
-
+        
         /// <summary>
         /// A repository to manage Image persistance.
         /// </summary>
-        public static ImageRepo Repo
+        public static ImageRepo Repo { get; } 
+            = new ImageRepoImpl.InMemoryCacheImageRepo();
+
+        public static Image FromJson(string json)
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
+            return JsonConvert.DeserializeObject<Image>(json);
         }
     }
 }

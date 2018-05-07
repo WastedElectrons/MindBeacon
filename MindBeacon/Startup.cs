@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MindBeacon.Service;
 
 namespace MindBeacon
 {
@@ -23,6 +24,12 @@ namespace MindBeacon
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            //TODO: Is this the right place to start the sync?
+            //TODO: This should really not be withing the web server process,
+            //we need to move this later.
+            //TODO: This really needs to be cancellable...
+            ImageSync.StartSync(new System.Threading.CancellationToken());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
