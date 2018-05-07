@@ -19,10 +19,10 @@ import { ImagesComponent } from './components/images/images.component';
         HttpModule,
         FormsModule,
         RouterModule.forRoot([
-            { path: '', redirectTo: 'home', pathMatch: 'full' },
+            { path: '', redirectTo: 'images', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
             { path: 'images', component: ImagesComponent },
-            { path: '**', redirectTo: 'home' }
+            { path: '**', redirectTo: 'images' }
         ])
     ]
 })
