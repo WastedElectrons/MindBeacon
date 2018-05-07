@@ -1,0 +1,15 @@
+DEPLOYMENT INSTRUCTIONS
+
+The MindBeacon app is a standalone web application with no external dependencies.
+The project contains both the server and client components and can be deployed 
+as a .Net web application with no special considerations.
+
+LIMITATIONS
+
+Multiple MindBeacon apps may be deployed. However, as each app has it's own 
+in memory cache there is a chance that sequential requests will return 
+different results.
+
+It's recommended to deploy MindBeacon as a singleton service.  If multiple 
+services are required, use sticky sessions to force each client to use a
+single instance.
